@@ -3,56 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הקישורים שלי</title>
+    <title>orielf - Official Links</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="bg-ambient"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    
     <div class="container">
         <!-- פרופיל -->
         <div class="profile">
-            <div class="avatar-container">
-                <img src="https://via.placeholder.com/150" alt="Profile" class="profile-img">
-                <span class="live-badge">LIVE</span>
+            <div class="avatar-wrapper">
+                <div class="avatar-ring">
+                    <img src="https://files.kick.com/images/user/77347899/profile_image/conversion/906b37f8-0bac-4a22-acd8-a52ef131dc5d-fullsize.webp" alt="orielf" class="profile-img">
+                </div>
             </div>
-            <h1>itay</h1>
-            <p class="username">@username</p>
-            <p class="bio">ברוכים הבאים לעמוד הקישורים שלי! תעקבו ותשארו מעודכנים 👇</p>
+            <h1>orielf</h1>
         </div>
 
-        <!-- כפתורי קישורים -->
-        <div class="links">
-            <a href="https://kick.com" target="_blank" class="link-card kick">
-                <div class="link-info">
-                    <span class="badge">LIVE NOW</span>
+        <div class="divider">
+            <span>הקישורים שלי</span>
+        </div>
+
+        <!-- גריד כפתורים -->
+        <div class="links-grid">
+            
+            <!-- Kick -->
+            <a href="https://kick.com/orielf" target="_blank" class="link-card kick">
+                <div class="card-content">
                     <h2>Kick</h2>
-                    <p>שידורים חיים כל שבוע</p>
+                    <p>שידורים חיים</p>
+                </div>
+                <div class="card-icon">
+                    <span class="kick-letter">K</span>
                 </div>
             </a>
 
-            <a href="https://discord.com" target="_blank" class="link-card discord">
-                <div class="link-info">
-                    <span class="badge">COMMUNITY</span>
+            <!-- Discord -->
+            <a href="https://discord.gg/fxrfczwKy8" target="_blank" class="link-card discord">
+                <div class="card-content">
                     <h2>Discord</h2>
-                    <p>שרת הדיסקורד הרשמי שלנו</p>
+                    <p>לעדכונים על לייבים</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-brands fa-discord"></i>
                 </div>
             </a>
 
-            <a href="https://instagram.com" target="_blank" class="link-card instagram">
-                <div class="link-info">
-                    <span class="badge">STORIES</span>
-                    <h2>Instagram</h2>
-                    <p>תמונות ועדכונים שוטפים</p>
-                </div>
-            </a>
-
-            <a href="https://tiktok.com" target="_blank" class="link-card tiktok">
-                <div class="link-info">
-                    <span class="badge">CLIPS</span>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/" target="_blank" class="link-card tiktok">
+                <div class="card-content">
                     <h2>TikTok</h2>
-                    <p>סרטונים קצרים וקליפים</p>
+                    <p>לערוץ הטיקטוק שלי</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-brands fa-tiktok"></i>
                 </div>
             </a>
+
+            <!-- Tips / Donations -->
+            <a href="https://botrix.live/k/orielf/tip" target="_blank" class="link-card tip">
+                <div class="card-content">
+                    <h2>תשלומים / Tip</h2>
+                    <p>תמיכה בערוץ</p>
+                </div>
+                <div class="card-icon">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+            </a>
+
         </div>
     </div>
+
+    <script>
+        const glow = document.getElementById('mouseGlow');
+        window.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
